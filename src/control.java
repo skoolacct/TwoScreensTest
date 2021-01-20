@@ -1,31 +1,44 @@
 import javax.swing.*;
 
 public class control {
-    static boolean varA = false;
-    static boolean varB = true;
+    static boolean runGameScreen = false;
+    static boolean startingScreen = true;
+    static boolean scoreboardScreen = false;
 
-    static JFrame a = new formOne();
-    static JFrame b = new formTwo();
+    static JFrame GS = new GameScreen(); // GS = Game Screen
+    static JFrame StS = new StartScreen(); // StS = Start Screen
+    static JFrame ScS = new Scoreboard(); // ScS = Scoreboard Screen
 
     public static void main(String[] args) {
-        a.setSize(500, 200);
-        b.setSize(500, 200);
-        a.setVisible(varA);
-        b.setVisible(varB);
+        GS.setSize(500, 200);
+        StS.setSize(500, 200);
+        ScS.setSize(500, 200);
+        GS.setVisible(runGameScreen);
+        StS.setVisible(startingScreen);
+        ScS.setVisible(scoreboardScreen);
     }
 
-    public static void changeVar(){
-        if (varA == true){
-            varB = true;
-            varA = false;
-        }else{
-            varB = false;
-            varA = true;
-        }
+    public static void goMenu(){
+        startingScreen = true;
+        runGameScreen = false;
+        scoreboardScreen = false;
+    }
+
+    public static void goGame(){
+        startingScreen = false;
+        runGameScreen = true;
+        scoreboardScreen = false;
+    }
+
+    public static void goScore(){
+        startingScreen = false;
+        runGameScreen = false;
+        scoreboardScreen = true;
     }
 
     public static void switchScreen(){
-        a.setVisible(varA);
-        b.setVisible(varB);
+        GS.setVisible(runGameScreen);
+        StS.setVisible(startingScreen);
+        ScS.setVisible(scoreboardScreen);
     }
 }
