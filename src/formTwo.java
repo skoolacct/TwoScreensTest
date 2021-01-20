@@ -4,8 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class formTwo extends JFrame{;
-    private JButton button2Button;
     private JPanel JPanel2;
+    private JButton startButton;
 
     public formTwo(){
 
@@ -13,10 +13,10 @@ public class formTwo extends JFrame{;
         this.setContentPane(JPanel2);
         this.pack();
 
-        button2Button.addActionListener(new ActionListener() {
+        startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("You pressed button 2");
+                System.out.println("You pressed the start button");
                 control.changeVar();
                 control.switchScreen();
             }

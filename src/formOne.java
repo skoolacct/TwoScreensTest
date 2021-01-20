@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class formOne extends JFrame{
-    private JButton button1Button;
+    private JButton exitButton;
     private JPanel panel1;
 
     public formOne(){
@@ -13,10 +13,10 @@ public class formOne extends JFrame{
         this.setContentPane(panel1);
         this.pack();
 
-        button1Button.addActionListener(new ActionListener() {
+        exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("You pressed button 1");
+                System.out.println("You pressed exit button");
                 control.changeVar();
                 control.switchScreen();
             }

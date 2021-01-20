@@ -1,8 +1,8 @@
 import javax.swing.*;
 
 public class control {
-    static boolean varA = true;
-    static boolean varB = false;
+    static boolean varA = false;
+    static boolean varB = true;
 
     static JFrame a = new formOne();
     static JFrame b = new formTwo();
