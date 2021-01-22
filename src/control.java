@@ -5,14 +5,14 @@ public class control {
     static boolean startingScreen = true;
     static boolean scoreboardScreen = false;
 
-    static JFrame GS = new GameScreen(); // GS = Game Screen
-    static JFrame StS = new StartScreen(); // StS = Start Screen
-    static JFrame ScS = new Scoreboard(); // ScS = Scoreboard Screen
+    static GameScreen GS = new GameScreen(); // GS = Game Screen
+    static StartScreen StS = new StartScreen(); // StS = Start Screen
+    static Scoreboard ScS = new Scoreboard(); // ScS = Scoreboard Screen
 
     public static void main(String[] args) {
-        GS.setSize(500, 200);
-        StS.setSize(500, 200);
-        ScS.setSize(500, 200);
+        GS.setSize(500, 360);
+        StS.setSize(500, 360);
+        ScS.setSize(500, 360);
         GS.setVisible(runGameScreen);
         StS.setVisible(startingScreen);
         ScS.setVisible(scoreboardScreen);
@@ -40,5 +40,9 @@ public class control {
         GS.setVisible(runGameScreen);
         StS.setVisible(startingScreen);
         ScS.setVisible(scoreboardScreen);
+    }
+
+    public static void switchImage(){
+        GS.imgChange();
     }
 }

@@ -7,6 +7,7 @@ public class Scoreboard extends JFrame{
 
     private JButton menuButton;
     private JPanel scorePanel;
+    private JButton SwitchButton;
 
     public Scoreboard(){
 
@@ -19,6 +20,13 @@ public class Scoreboard extends JFrame{
                 System.out.println("You pressed the menu button");
                 control.goMenu();
                 control.switchScreen();
+            }
+        });
+
+        SwitchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                control.switchImage();
             }
         });
     }
